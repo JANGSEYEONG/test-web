@@ -1,0 +1,36 @@
+body.dark {
+  background: #181818;
+}
+.dark .header,
+.dark .about,
+.dark .work,
+.dark .contact,
+.dark .socials,
+.dark .gallery {
+  background: #232323 !important;
+  color: #fafafa;
+}
+.dark .logo,
+.dark .projectName,
+.dark .text,
+.dark .question,
+.dark .title,
+.dark .navLinks a,
+.dark .footer {
+  color: #fafafa !important;
+}
+.dark .arrow {
+  background: #232323 !important;
+  color: #F8AFA6 !important;
+}
+.dark .circleIcon, .dark .circle-icon {
+  background: #F8AFA6 !important;
+}
+.dark .flower-icon {
+  background: radial-gradient(circle at 60% 40%, #232323 60%, #181818 100%) !important;
+  box-shadow: 0 0 32px 8px #232323;
+}
+.dark .gallery-img {
+  background: linear-gradient(135deg, #232323 60%, #181818 100%) !important;
+  box-shadow: 0 4px 24px #232323aa;
+}
