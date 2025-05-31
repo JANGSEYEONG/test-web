@@ -3,76 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F9F1F0">
-  <title>Bentolio | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Julia Huang | Creative Developer Portfolio</title>
+  <meta name="theme-color" content="#f7f8fa">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Fira+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="darkmode.css">
-  <link rel="stylesheet" href="animate.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
-  <button id="darkToggle" class="dark-toggle">🌙/☀️</button>
-  <div class="container">
-    <header class="header animate-fadein">
-      <div class="logo">JULIA HUANG</div>
-      <nav class="navLinks">
-        <a href="#work">PROJECTS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </header>
-    <main class="mainContent">
-      <section id="hero" class="hero animate-float">
-        <h1 class="hero-title">Artist Redefining Architecture<br>with AI-Driven Design</h1>
-        <div class="hero-icons">
-          <div class="flower-icon floating"></div>
-          <div class="circle-icon floating"></div>
+  <button id="darkToggle" class="dark-toggle" aria-label="Toggle dark mode">
+    <span class="toggle-thumb"></span>
+    <span class="toggle-track"></span>
+  </button>
+  <div class="bg-animated"></div>
+  <header class="header">
+    <div class="logo">Julia Huang</div>
+    <nav class="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Hi, I'm <span>Julia</span>.<br>Creative Developer & AI Artist</h1>
+        <p class="hero-desc">I design and build delightful digital experiences with code, art, and AI.</p>
+        <a href="#projects" class="cta">See My Work ↓</a>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="about-avatar" alt="Julia Huang portrait">
+        <div>
+          <p>Hello! I'm Julia, a creative developer based in LA. I love blending technology and art to make unique, accessible digital experiences. My passion is building beautiful, performant, and meaningful web products.</p>
+          <ul class="about-list">
+            <li>🎨 Digital Artist & Frontend Engineer</li>
+            <li>💡 Interested in AI, Generative Art, UX</li>
+            <li>🌎 Open to remote/freelance work</li>
+          </ul>
         </div>
-      </section>
-      <section id="about" class="about animate-slideup">
-        <div class="circleIcon"></div>
-        <div class="text">
-          Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Project 1">
+          <div class="project-info">
+            <h3>Artfolio</h3>
+            <p>Personal portfolio template for artists. React, GSAP, styled-components.</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
         </div>
-      </section>
-      <section id="work" class="work animate-slideup">
-        <div class="item flying" style="--fly-x: 60vw; --fly-y: 10vh;"><span class="projectName">Musea</span></div>
-        <div class="item flying" style="--fly-x: -50vw; --fly-y: 15vh;"><span class="projectName">Elara</span></div>
-        <div class="item flying" style="--fly-x: 30vw; --fly-y: 25vh;"><span class="projectName">Verve</span></div>
-        <div class="item flying" style="--fly-x: -40vw; --fly-y: 30vh;"><span class="projectName">Zephyr</span></div>
-      </section>
-      <section id="gallery" class="gallery animate-gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-row">
-          <div class="gallery-img floating" style="animation-delay: 0.1s;"></div>
-          <div class="gallery-img floating" style="animation-delay: 0.3s;"></div>
-          <div class="gallery-img floating" style="animation-delay: 0.5s;"></div>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Project 2">
+          <div class="project-info">
+            <h3>AI Gallery</h3>
+            <p>Generative art gallery using AI models. Node.js, Three.js, WebGL.</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
         </div>
-        <div class="gallery-row">
-          <div class="gallery-img floating" style="animation-delay: 0.2s;"></div>
-          <div class="gallery-img floating" style="animation-delay: 0.4s;"></div>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Project 3">
+          <div class="project-info">
+            <h3>UX Playground</h3>
+            <p>Micro-interaction playground for web UX. Vanilla JS, CSS Animations.</p>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
         </div>
-      </section>
-      <section id="contact" class="contact animate-slideup">
-        <div class="topBar">
-          <span class="question">Have some<br>questions?</span>
-          <span class="arrow">→</span>
-        </div>
-        <div class="title">Contact me</div>
-      </section>
-      <section class="socials animate-slideup">
-        <div class="links">
-          <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Linkedin</a>
-        </div>
-      </section>
-      <footer class="footer animate-fadein">
-        <div>© 2025 Julia Huang. All rights reserved.</div>
-      </footer>
-    </main>
-  </div>
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill"><span>JavaScript</span><div class="bar"><div class="bar-inner" style="width: 90%"></div></div></div>
+        <div class="skill"><span>React</span><div class="bar"><div class="bar-inner" style="width: 85%"></div></div></div>
+        <div class="skill"><span>CSS/SCSS</span><div class="bar"><div class="bar-inner" style="width: 80%"></div></div></div>
+        <div class="skill"><span>GSAP</span><div class="bar"><div class="bar-inner" style="width: 75%"></div></div></div>
+        <div class="skill"><span>AI/ML</span><div class="bar"><div class="bar-inner" style="width: 70%"></div></div></div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form class="contact-form" autocomplete="off">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div class="contact-links">
+        <a href="mailto:julia@email.com">julia@email.com</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <span>© 2025 Julia Huang. All rights reserved.</span>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>

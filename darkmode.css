@@ -1,36 +1,29 @@
 body.dark {
-  background: #181818;
+  background: #181a20;
+  color: #f1f3f7;
 }
-.dark .header,
-.dark .about,
-.dark .work,
-.dark .contact,
-.dark .socials,
-.dark .gallery {
-  background: #232323 !important;
-  color: #fafafa;
+body.dark .bg-animated {
+  background: radial-gradient(circle at 30% 90%, #232946 0%, #181a20 80%);
 }
-.dark .logo,
-.dark .projectName,
-.dark .text,
-.dark .question,
-.dark .title,
-.dark .navLinks a,
-.dark .footer {
-  color: #fafafa !important;
+body.dark .header {
+  background: rgba(30,32,38,0.9);
+  box-shadow: 0 2px 16px #23294655;
 }
-.dark .arrow {
-  background: #232323 !important;
-  color: #F8AFA6 !important;
+body.dark .about, body.dark .projects, body.dark .skills, body.dark .contact {
+  background: #232946;
+  color: #f1f3f7;
+  box-shadow: 0 4px 32px #23294655;
 }
-.dark .circleIcon, .dark .circle-icon {
-  background: #F8AFA6 !important;
+body.dark .project-card { background: #232946; }
+body.dark .project-card:hover { box-shadow: 0 8px 36px #6366f199; }
+body.dark .skills-list .bar { background: #181a20; }
+body.dark .skills-list .bar-inner { background: linear-gradient(90deg, #a5b4fc 60%, #6366f1 100%); }
+body.dark .contact-form input, body.dark .contact-form textarea {
+  background: #181a20; color: #f1f3f7; border: 1px solid #232946;
 }
-.dark .flower-icon {
-  background: radial-gradient(circle at 60% 40%, #232323 60%, #181818 100%) !important;
-  box-shadow: 0 0 32px 8px #232323;
-}
-.dark .gallery-img {
-  background: linear-gradient(135deg, #232323 60%, #181818 100%) !important;
-  box-shadow: 0 4px 24px #232323aa;
-}
+body.dark .contact-form input:focus, body.dark .contact-form textarea:focus { border: 1.5px solid #a5b4fc; }
+body.dark .footer { color: #aaa; }
+body.dark .cta { background: #fff; color: #232946; }
+body.dark .cta:hover { background: #e0e7ff; color: #232946; }
+body.dark .dark-toggle { background: #6366f1; }
+body.dark .toggle-thumb { background: #fff; }

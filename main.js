@@ -1,58 +1,40 @@
-// Dark mode toggle
+// 다크모드 토글 스위치
 const darkBtn = document.getElementById('darkToggle');
 darkBtn.onclick = () => {
   document.body.classList.toggle('dark');
   localStorage.setItem('darkmode', document.body.classList.contains('dark'));
+  updateToggle();
 };
+function updateToggle() {
+  const thumb = document.querySelector('.toggle-thumb');
+  if(document.body.classList.contains('dark')) {
+    thumb.style.transform = 'translateX(26px)';
+  } else {
+    thumb.style.transform = 'translateX(0)';
+  }
+}
 if (localStorage.getItem('darkmode') === 'true') {
   document.body.classList.add('dark');
 }
+updateToggle();
 
-// GSAP 애니메이션 효과 (프레이머 모션 느낌)
+// GSAP 애니메이션
 window.addEventListener('DOMContentLoaded', () => {
-  gsap.to('.animate-fadein', { opacity: 1, duration: 1, y: 0, ease: 'power2.out' });
-  gsap.utils.toArray('.animate-slideup').forEach((el, i) => {
-    gsap.to(el, { opacity: 1, y: 0, duration: 1, delay: 0.2 + i * 0.15, ease: 'power2.out' });
+  gsap.from('.hero-title', { opacity: 0, y: 40, duration: 1, ease: 'power2.out' });
+  gsap.from('.hero-desc', { opacity: 0, y: 20, duration: 1, delay: 0.3 });
+  gsap.from('.cta', { opacity: 0, scale: 0.8, duration: 0.8, delay: 0.7 });
+  gsap.from('.about-avatar', { opacity: 0, x: -40, duration: 1, delay: 0.5 });
+  gsap.from('.about-list li', { opacity: 0, x: 30, duration: 0.7, stagger: 0.1, delay: 0.7 });
+  gsap.utils.toArray('.project-card').forEach((el, i) => {
+    gsap.from(el, { opacity: 0, y: 40, duration: 1, delay: 0.2 + i * 0.15 });
   });
-  gsap.to('.animate-float', { opacity: 1, duration: 1.2, y: 0, ease: 'power2.out', delay: 0.2 });
-
-  // 요소가 날아다니는 효과
-  gsap.utils.toArray('.flying').forEach((el, i) => {
-    gsap.to(el, {
-      x: el.style.getPropertyValue('--fly-x') || 0,
-      y: el.style.getPropertyValue('--fly-y') || 0,
-      rotation: (Math.random() - 0.5) * 30,
-      scale: 1.08,
-      duration: 2.5 + Math.random(),
-      yoyo: true,
-      repeat: -1,
-      ease: 'power1.inOut',
-      delay: 0.5 + i * 0.2
-    });
-  });
-  // 갤러리 이미지 부유 효과
-  gsap.utils.toArray('.gallery-img').forEach((el, i) => {
-    gsap.to(el, {
-      y: -24,
-      scale: 1.04,
-      duration: 3 + Math.random(),
-      yoyo: true,
-      repeat: -1,
-      ease: 'sine.inOut',
-      delay: i * 0.2
-    });
-  });
-  // 아이콘 부유 효과
-  gsap.utils.toArray('.floating').forEach((el, i) => {
-    gsap.to(el, {
-      y: -16,
-      x: (i % 2 === 0 ? 1 : -1) * 16,
-      rotation: (Math.random() - 0.5) * 12,
-      duration: 2.2 + Math.random(),
-      yoyo: true,
-      repeat: -1,
-      ease: 'power1.inOut',
-      delay: 0.1 * i
-    });
-  });
+  gsap.from('.skills-list .skill', { opacity: 0, x: -30, duration: 0.7, stagger: 0.08, delay: 0.5 });
+  gsap.from('.contact-form input, .contact-form textarea', { opacity: 0, y: 20, duration: 0.7, stagger: 0.1, delay: 0.6 });
 });
+// Contact form dummy submit
+const form = document.querySelector('.contact-form');
+if(form) form.onsubmit = e => {
+  e.preventDefault();
+  alert('Thank you for your message! (Demo only)');
+  form.reset();
+};
