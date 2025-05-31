@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1440">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F9F1F0">
   <title>Bentolio | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="darkmode.css">
+  <link rel="stylesheet" href="animate.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
+  <button id="darkToggle" class="dark-toggle">🌙/☀️</button>
   <div class="container">
-    <header class="header">
+    <header class="header animate-fadein">
       <div class="logo">JULIA HUANG</div>
       <nav class="navLinks">
         <a href="#work">PROJECTS</a>
@@ -19,26 +23,26 @@
       </nav>
     </header>
     <main class="mainContent">
-      <section id="about" class="about">
+      <section id="about" class="about animate-slideup">
         <div class="circleIcon"></div>
         <div class="text">
           Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
         </div>
       </section>
-      <section id="work" class="work">
+      <section id="work" class="work animate-slideup">
         <div class="item"><span class="projectName">Musea</span></div>
         <div class="item"><span class="projectName">Elara</span></div>
         <div class="item"><span class="projectName">Verve</span></div>
         <div class="item"><span class="projectName">Zephyr</span></div>
       </section>
-      <section id="contact" class="contact">
+      <section id="contact" class="contact animate-slideup">
         <div class="topBar">
           <span class="question">Have some<br>questions?</span>
           <span class="arrow">→</span>
         </div>
         <div class="title">Contact me</div>
       </section>
-      <section class="socials">
+      <section class="socials animate-slideup">
         <div class="links">
           <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -47,5 +51,6 @@
       </section>
     </main>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>

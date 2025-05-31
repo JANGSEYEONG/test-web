@@ -1,0 +1,26 @@
+body.dark {
+  background: #181818;
+}
+.dark .header,
+.dark .about,
+.dark .work,
+.dark .contact,
+.dark .socials {
+  background: #232323 !important;
+  color: #fafafa;
+}
+.dark .logo,
+.dark .projectName,
+.dark .text,
+.dark .question,
+.dark .title,
+.dark .navLinks a {
+  color: #fafafa !important;
+}
+.dark .arrow {
+  background: #232323 !important;
+  color: #F8AFA6 !important;
+}
+.dark .circleIcon {
+  background: #F8AFA6 !important;
+}
